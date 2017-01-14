@@ -1,11 +1,11 @@
 web:
     container_name: web
-    build: ./images/php5.4-apache
+    build: ./images/php5.6-apache
     ports:
         - 80:80
     links:
         - db
-        - search        
+        - search
     volumes:
         - ./data/web:/var/www/html
 db:
@@ -19,7 +19,7 @@ db:
         - ./data/mysql:/var/lib/mysql
 search:
     container_name: search
-    build: ./images/elasticsearch1.4
+    build: ./images/elasticsearch1.7
     ports:
         - 9200:9200
         - 9300:9300
