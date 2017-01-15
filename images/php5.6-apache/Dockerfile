@@ -1,9 +1,9 @@
-FROM php:5.4-apache
+FROM php:5.6-apache
 MAINTAINER cedric.mourizard@gmail.com
 
-RUN    apt-get -qqy update \
-  && apt-get install -y vim \
-	&& apt-get install -y libpng12-dev libjpeg-dev \
+RUN  apt-get -qqy update \
+  && apt-get -y install vim \
+	&& apt-get -y install libpng12-dev libjpeg-dev \
 	&& apt-get -y install re2c libmcrypt-dev \
 	&& apt-get -y install zlib1g-dev \
 	&& apt-get -y install libssl-dev libc-client2007e-dev libkrb5-dev \
@@ -12,8 +12,8 @@ RUN    apt-get -qqy update \
 	&& apt-get -y install libssl-dev \
 	&& apt-get -y install libcurl4-openssl-dev
 
-RUN    docker-php-ext-install bcmath \
-    && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
+RUN  docker-php-ext-install bcmath \
+  && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
 	&& docker-php-ext-install gd \
 	&& docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
 	&& docker-php-ext-install imap \
