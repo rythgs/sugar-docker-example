@@ -1,5 +1,4 @@
 FROM php:7.1-apache
-MAINTAINER cedric.mourizard@gmail.com
 
 RUN  apt-get -qqy update \
   && apt-get -y install vim \
