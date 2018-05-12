@@ -1,27 +1,30 @@
-web:
+version: '3'
+
+services:
+  web:
     container_name: web
     build: ./images/web
     ports:
-        - 80:80
+      - 80:80
     links:
-        - db
-        - search
+      - db
+      - search
     volumes:
-        - ./data/web:/var/www/html
-db:
+      - ./data/web:/var/www/html
+  db:
     container_name: db
     build: ./images/db
     environment:
-        - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
     ports:
-        - 3306:3306
+      - 3306:3306
     volumes:
-        - ./data/mysql:/var/lib/mysql
-search:
+      - ./data/mysql:/var/lib/mysql
+  search:
     container_name: search
     build: ./images/search
     ports:
-        - 9200:9200
-        - 9300:9300
+      - 9200:9200
+      - 9300:9300
     volumes:
-        - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
