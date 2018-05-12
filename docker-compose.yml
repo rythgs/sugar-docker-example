@@ -1,6 +1,6 @@
 web:
     container_name: web
-    build: ./images/php5.6-apache
+    build: ./images/web
     ports:
         - 80:80
     links:
@@ -10,7 +10,7 @@ web:
         - ./data/web:/var/www/html
 db:
     container_name: db
-    build: ./images/percona5.6
+    build: ./images/db
     environment:
         - MYSQL_ROOT_PASSWORD=root
     ports:
@@ -19,7 +19,7 @@ db:
         - ./data/mysql:/var/lib/mysql
 search:
     container_name: search
-    build: ./images/elasticsearch1.7
+    build: ./images/search
     ports:
         - 9200:9200
         - 9300:9300
