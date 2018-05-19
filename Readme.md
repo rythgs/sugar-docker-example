@@ -5,7 +5,7 @@ SugarCRM の動作環境を Dokcer で構築します。
 - Apache 2.4
 - PHP 7.1
 - MySQL 5.7
-- ElasticSearch 5.6
+- ElasticSearch 1.7
 
 ## 使い方
 
