@@ -1,5 +1,3 @@
-data/mysql
-data/elasticsearch
-data/web/*
-!data/web/info.php
 .DS_Store
+src/*
+!src/info.php

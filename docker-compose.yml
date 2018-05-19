@@ -1,30 +1,34 @@
 version: '3'
 
+volumes:
+  datastore:
+    driver: 'local'
+
 services:
   web:
     container_name: web
-    build: ./images/web
+    build: containers/web
     ports:
       - 80:80
     links:
       - db
       - search
     volumes:
-      - ./data/web:/var/www/html
+      - ./src:/var/www/html
   db:
     container_name: db
-    build: ./images/db
+    build: containers/db
     environment:
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - 3306:3306
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - datastore:/var/lib/mysql
   search:
     container_name: search
-    build: ./images/search
+    build: containers/search
     ports:
       - 9200:9200
       - 9300:9300
     volumes:
-      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - datastore:/usr/share/elasticsearch/data
