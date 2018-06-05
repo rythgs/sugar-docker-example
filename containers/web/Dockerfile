@@ -2,7 +2,7 @@ FROM php:7.1-apache
 
 RUN  apt-get -qqy update \
   && apt-get -y install vim \
-  && apt-get -y install libpng12-dev libjpeg-dev \
+  && apt-get -y install libpng-dev libjpeg-dev \
   && apt-get -y install re2c libmcrypt-dev \
   && apt-get -y install zlib1g-dev \
   && apt-get -y install libssl-dev libc-client2007e-dev libkrb5-dev \
