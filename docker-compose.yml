@@ -6,7 +6,6 @@ volumes:
 
 services:
   web:
-    container_name: web
     build: containers/web
     ports:
       - 80:80
@@ -16,7 +15,6 @@ services:
     volumes:
       - ./src:/var/www/html
   db:
-    container_name: db
     build: containers/db
     environment:
       - MYSQL_ROOT_PASSWORD=root
@@ -25,7 +23,6 @@ services:
     volumes:
       - datastore:/var/lib/mysql
   search:
-    container_name: search
     build: containers/search
     ports:
       - 9200:9200
