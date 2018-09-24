@@ -1,8 +1,8 @@
 version: '3'
 
 volumes:
-  datastore:
-    driver: 'local'
+  dbdata:
+  searchdata:
 
 services:
   web:
@@ -15,17 +15,19 @@ services:
     volumes:
       - ./src:/var/www/html
   db:
-    build: containers/db
+    image: mysql:5.7
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - 3306:3306
     volumes:
-      - datastore:/var/lib/mysql
+      - dbdata:/var/lib/mysql
   search:
     build: containers/search
+    restart: always
     ports:
       - 9200:9200
       - 9300:9300
     volumes:
-      - datastore:/usr/share/elasticsearch/data
+      - searchdata:/usr/share/elasticsearch/data
