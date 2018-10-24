@@ -26,6 +26,8 @@ services:
   search:
     build: containers/search
     restart: always
+    environment:
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
     ports:
       - 9200:9200
       - 9300:9300
