@@ -13,7 +13,7 @@ services:
       - db
       - search
     volumes:
-      - ./src:/var/www/html
+      - ./src:/var/www/html:cached
   db:
     image: mysql:5.7
     restart: always
