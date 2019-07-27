@@ -1,5 +1,7 @@
 FROM php:7.3-apache
 
+RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
+
 RUN  apt-get -qqy update \
   && apt-get -y install vim \
   && apt-get -y install libpng-dev libjpeg-dev \
