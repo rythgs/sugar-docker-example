@@ -9,9 +9,6 @@ services:
     build: containers/web
     ports:
       - 80:80
-    links:
-      - db
-      - search
     volumes:
       - ./src:/var/www/html:cached
   db:
