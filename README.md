@@ -5,7 +5,7 @@ Supports version `v9.0.x`.
 - Apache 2.4
 - PHP 7.3
 - MySQL 5.7
-- ElasticSearch 6.2
+- ElasticSearch 6.8.3
 
 https://support.sugarcrm.com/Resources/Supported_Platforms/Sugar_9.0.x_Supported_Platforms/
 
