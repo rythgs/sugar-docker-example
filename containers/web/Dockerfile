@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8.0-apache
 
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 
