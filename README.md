@@ -1,6 +1,6 @@
 # SugarCRM on Docker
 
-Supports version `v13.0.x`.
+Supports version `v14.0.x`.
 
 - Apache 2.4
 - PHP 8.3
