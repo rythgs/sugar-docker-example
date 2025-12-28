@@ -1,6 +1,6 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+FROM opensearchproject/opensearch:2.19.0
 
 # kuromoji
-RUN elasticsearch-plugin install analysis-kuromoji
+RUN /usr/share/opensearch/bin/opensearch-plugin install analysis-kuromoji
 
-COPY config/elasticsearch.yml /usr/share/elasticsearch/config/
+COPY config/opensearch.yml /usr/share/opensearch/config/

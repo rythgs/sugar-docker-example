@@ -1,13 +1,13 @@
 # SugarCRM on Docker
 
-Supports version `v14.0.x`.
+Supports version `v25.1.x`.
 
 - Apache 2.4
-- PHP 8.3
-- MySQL 8.0.31
-- ElasticSearch 8.4.3
+- PHP 8.4
+- MySQL 8.4
+- OpenSearch 2.19.0
 
-https://support.sugarcrm.com/resources/supported_platforms/sugar_14.0.x_supported_platforms/
+https://support.sugarcrm.com/resources/supported_platforms/#Sugar_25.1.x_Supported_Platforms
 
 ## Usage
 
@@ -29,3 +29,4 @@ Put source code here.
 - [Sugar 11.x](https://github.com/rythgs/sugar-docker-example/tree/sugar-11.x)
 - [Sugar 12.0.x](https://github.com/rythgs/sugar-docker-example/tree/sugar-12.0.x)
 - [Sugar 13.0.x](https://github.com/rythgs/sugar-docker-example/tree/sugar-13.0.x)
+- [Sugar 14.0.x](https://github.com/rythgs/sugar-docker-example/tree/sugar-14.0.x)
